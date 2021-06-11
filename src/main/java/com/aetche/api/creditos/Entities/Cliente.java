@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import org.hibernate.annotations.NaturalId;
 
-import ar.com.ada.api.creditos.excepciones.*;
+import ar.com.ada.api.creditos.exceptions.*;
 
 import java.util.*;
 

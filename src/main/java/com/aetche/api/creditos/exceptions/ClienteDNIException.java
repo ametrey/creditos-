@@ -1,4 +1,4 @@
-package ar.com.ada.api.creditos.excepciones;
+package ar.com.ada.api.creditos.exceptions;
 
 import ar.com.ada.api.creditos.entities.*;
 
