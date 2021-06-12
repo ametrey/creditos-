@@ -21,6 +21,14 @@ public class ClienteService {
 
     }
 
+    public void crearClientes(Cliente cliente){
+
+        repository.save(cliente);
+
+    }
+
+    
+
 
 
 
