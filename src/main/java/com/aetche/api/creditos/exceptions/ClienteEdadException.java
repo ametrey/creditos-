@@ -1,6 +1,7 @@
-package ar.com.ada.api.creditos.exceptions;
+package com.aetche.api.creditos.exceptions;
 
-import ar.com.ada.api.creditos.entities.*;
+import com.aetche.api.creditos.entities.Cliente;
+
 
 /**
  * ClienteEdadException

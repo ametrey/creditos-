@@ -1,4 +1,4 @@
-package ar.com.ada.api.creditos.entities;
+package com.aetche.api.creditos.entities;
 
 import javax.persistence.*;
 
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.*;
 
 import org.hibernate.annotations.NaturalId;
 
-import ar.com.ada.api.creditos.exceptions.*;
+import com.aetche.api.creditos.exceptions.*;
 
 import java.util.*;
 

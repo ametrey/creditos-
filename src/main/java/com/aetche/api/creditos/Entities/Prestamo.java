@@ -1,4 +1,4 @@
-package ar.com.ada.api.creditos.entities;
+package com.aetche.api.creditos.entities;
 
 import java.math.BigDecimal;
 import java.util.Date;
