@@ -1,17 +1,19 @@
-package ar.com.ada.creditos.entities;
+package ar.com.ada.api.creditos.entities;
 
-import java.util.*;
-import java.math.*;
+import java.math.BigDecimal;
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "prestamo")
 public class Prestamo {
-    @Id
-    @Column(name = "prestamo_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int prestamoId;
 
+    @Id //que es una PK.
+    @Column(name = "prestamo_id") //Nombre con el que se mapea a la base de datos.
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Autoincremental
+    private int prestamoId;
+    
     @Temporal(TemporalType.DATE)
     private Date fecha;
 
@@ -88,14 +90,10 @@ public class Prestamo {
     public void setEstadoId(EstadoPrestamoEnum estadoId) {
         this.estadoId = estadoId.getValue();
     }
+
     //enumerado
     public enum EstadoPrestamoEnum {
-        SOLICITADO(1), 
-        RECHAZADO(2),
-        PENDIENTE_APROBACION(3),
-        APROBADO(4),
-        INCOBRABLE(5),
-        CANCELADO(6),
+        SOLICITADO(1), RECHAZADO(2), PENDIENTE_APROBACION(3), APROBADO(4), INCOBRABLE(5), CANCELADO(6),
         PREAPROBADO(100);
 
         private final int value;

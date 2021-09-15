@@ -1,10 +1,12 @@
-package ar.com.ada.creditos.entities;
+package ar.com.ada.api.creditos.entities;
 
 import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.*;
+
 import org.hibernate.annotations.NaturalId;
 
-import ar.com.ada.creditos.excepciones.*;
+import ar.com.ada.api.creditos.excepciones.*;
 
 import java.util.*;
 
@@ -13,11 +15,9 @@ import java.util.*;
 public class Cliente {
     @Id
     @Column(name = "cliente_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //AUTOINCREMENTAL
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int clienteId;
-
     private String nombre;
-
     @NaturalId
     private int dni;
 
@@ -30,7 +30,8 @@ public class Cliente {
     @Temporal(TemporalType.DATE) //SOLO Poner esto si no queremos manejar HORA en el DB Server.
     private Date fechaNacimiento;
 
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL) //de uno a muchos
+    @JsonIgnore
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Prestamo> prestamos = new ArrayList<>();
 
     public Cliente(String nombre) {

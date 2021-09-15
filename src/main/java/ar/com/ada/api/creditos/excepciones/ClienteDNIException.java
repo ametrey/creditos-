@@ -1,6 +1,6 @@
-package ar.com.ada.creditos.excepciones;
+package ar.com.ada.api.creditos.excepciones;
 
-import ar.com.ada.creditos.entities.*;
+import ar.com.ada.api.creditos.entities.*;
 
 /**
  * ClienteDNIException
