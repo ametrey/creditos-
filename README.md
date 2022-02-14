@@ -1,3 +1,3 @@
 # creditos-api
 
-Heroku App: https://ada-creditos.herokuapp.com/
+Heroku App: https://ada-creditos.herokuapp.com/creditos.html
